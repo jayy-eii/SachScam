@@ -22,7 +22,7 @@ class TavilyProvider:
     """
 
     def __init__(self, api_key: Optional[str] = None):
-        self.api_key = (api_key or Config.TAVILY_API_KEY).strip()
+        self.api_key = (api_key if api_key is not None else Config.TAVILY_API_KEY).strip()
         self._client = None
         self._cache: Dict[str, List[SourceRecord]] = {}
         self._last_error: Optional[str] = None

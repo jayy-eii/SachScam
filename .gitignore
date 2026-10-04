@@ -1,4 +1,10 @@
 venv/
 .env
+.env.*
 __pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
 .DS_Store
+*.png
+!data/sample_screenshots/*.png
